@@ -12,8 +12,8 @@ def password_lister():
     while len(password_list) < 5:
         password_list.append(password_generator())
     password_list = str(password_list)
-    print(len(password_list))
     return password_list
 
-print(password_generator())
-print(password_lister())
+f = open('passwordlist.txt', 'a')
+f.write(password_lister())
+f.close()
